@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  /*include the padding and border in an element's total width and height for all elements*/
+  box-sizing: border-box;
+}
+
+/*I prefer using rem units. 1rem = 16px but it’s much easier to convert px to rem when 1rem is equal to 10px*/
+html {
+  font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+}
+
+img {
+  /*avoid little space underneath image*/
+  display: block;
+  /*prevent image from blowing up its container*/
+  max-width: 100%;
+}
+
+/*remove list markers such as bullets, numbers, ect.*/
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+/*remove padding on the left side for the following elements*/
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
